@@ -530,7 +530,8 @@
       </nav>
     </div>
     <div class="footer-legal">
-      <b>Aviso de transparencia:</b> Como afiliado de Mercado Libre, obtengo una comisión por las compras realizadas a través de los enlaces de esta página, sin costo adicional para ti. Solo recomiendo productos que evalué con criterio técnico propio.
+      <b>Aviso de transparencia:</b> Como afiliado de Mercado Libre, obtengo una comisión por las compras realizadas a través de los enlaces de esta página, sin costo adicional para ti. Solo recomiendo productos que evalué con criterio técnico propio.<br>
+      <b>Sobre los precios:</b> son precios de referencia y pueden variar según el vendedor, promociones vigentes o disponibilidad. Cuando no hay una página de producto individual disponible, el enlace lleva a la tienda oficial del distribuidor (ej. Unit Electronics) o al listado de búsqueda correspondiente.
     </div>
     <div class="footer-bottom">
       <span>© 2026 MecaTools · Angel Morteo</span>
@@ -554,72 +555,112 @@ const ICONS = {
   fuente: `<svg viewBox="0 0 64 64" fill="none" stroke="#34e2e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="48" height="32" rx="4"/><circle cx="20" cy="26" r="6"/><line x1="20" y1="22" x2="20" y2="26"/><line x1="20" y1="26" x2="23" y2="28"/><rect x="34" y="20" width="14" height="12" rx="1"/><line x1="14" y1="50" x2="50" y2="50"/></svg>`,
   osciloscopio: `<svg viewBox="0 0 64 64" fill="none" stroke="#ff5fa2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="48" height="34" rx="4"/><polyline points="14,30 20,30 24,18 30,42 36,22 40,30 50,30"/><circle cx="16" cy="50" r="3"/><circle cx="48" cy="50" r="3"/></svg>`,
   impresora3d: `<svg viewBox="0 0 64 64" fill="none" stroke="#ff5fa2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="10" width="44" height="10" rx="2"/><line x1="16" y1="20" x2="16" y2="50"/><line x1="48" y1="20" x2="48" y2="50"/><rect x="22" y="38" width="20" height="14" rx="2"/><line x1="32" y1="24" x2="32" y2="38"/><circle cx="32" cy="22" r="2" fill="#ff5fa2" stroke="none"/></svg>`,
-  raspberry: `<svg viewBox="0 0 64 64" fill="none" stroke="#7ee787" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="16" width="48" height="32" rx="6"/><circle cx="20" cy="32" r="5"/><circle cx="38" cy="32" r="5"/><line x1="14" y1="16" x2="14" y2="10"/><line x1="22" y1="16" x2="22" y2="10"/><line x1="50" y1="24" x2="56" y2="24"/><line x1="50" y1="34" x2="56" y2="34"/></svg>`
+  raspberry: `<svg viewBox="0 0 64 64" fill="none" stroke="#7ee787" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="16" width="48" height="32" rx="6"/><circle cx="20" cy="32" r="5"/><circle cx="38" cy="32" r="5"/><line x1="14" y1="16" x2="14" y2="10"/><line x1="22" y1="16" x2="22" y2="10"/><line x1="50" y1="24" x2="56" y2="24"/><line x1="50" y1="34" x2="56" y2="34"/></svg>`,
+  chip: `<svg viewBox="0 0 64 64" fill="none" stroke="#f4e94c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="14" width="28" height="36" rx="3"/><circle cx="24" cy="20" r="1.4" fill="#f4e94c" stroke="none"/><line x1="10" y1="20" x2="18" y2="20"/><line x1="10" y1="28" x2="18" y2="28"/><line x1="10" y1="36" x2="18" y2="36"/><line x1="10" y1="44" x2="18" y2="44"/><line x1="46" y1="20" x2="54" y2="20"/><line x1="46" y1="28" x2="54" y2="28"/><line x1="46" y1="36" x2="54" y2="36"/><line x1="46" y1="44" x2="54" y2="44"/></svg>`,
+  robotcar: `<svg viewBox="0 0 64 64" fill="none" stroke="#34e2e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="22" width="44" height="20" rx="5"/><circle cx="18" cy="46" r="6"/><circle cx="46" cy="46" r="6"/><line x1="24" y1="22" x2="24" y2="14"/><circle cx="24" cy="12" r="2" fill="#34e2e2" stroke="none"/><rect x="36" y="27" width="10" height="6" rx="1"/></svg>`,
+  motor: `<svg viewBox="0 0 64 64" fill="none" stroke="#ff5fa2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="14" width="30" height="30" rx="4"/><circle cx="29" cy="29" r="8"/><line x1="44" y1="29" x2="56" y2="29"/><line x1="20" y1="14" x2="20" y2="8"/><line x1="38" y1="14" x2="38" y2="8"/><line x1="20" y1="44" x2="20" y2="50"/><line x1="38" y1="44" x2="38" y2="50"/></svg>`,
+  conveyor: `<svg viewBox="0 0 64 64" fill="none" stroke="#7ee787" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="24" width="52" height="14" rx="7"/><circle cx="13" cy="31" r="4"/><circle cx="51" cy="31" r="4"/><rect x="24" y="14" width="10" height="10" rx="2"/><line x1="29" y1="24" x2="29" y2="30"/><path d="M40 46l4 4-4 4"/><line x1="20" y1="50" x2="44" y2="50"/></svg>`,
+  wifichip: `<svg viewBox="0 0 64 64" fill="none" stroke="#34e2e2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="22" cy="34" r="3" fill="#34e2e2" stroke="none"/><path d="M15 29a10 10 0 0 1 14 0" stroke-width="2"/><path d="M11 25a16 16 0 0 1 22 0" stroke-width="2"/><line x1="34" y1="34" x2="46" y2="34"/><line x1="34" y1="40" x2="46" y2="40"/></svg>`,
+  camera: `<svg viewBox="0 0 64 64" fill="none" stroke="#ff5fa2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="18" width="48" height="32" rx="6"/><circle cx="32" cy="34" r="10"/><circle cx="32" cy="34" r="4" fill="#ff5fa2" stroke="none"/><path d="M20 18l4-6h16l4 6"/></svg>`,
+  plcind: `<svg viewBox="0 0 64 64" fill="none" stroke="#f4e94c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="10" width="44" height="44" rx="5"/><line x1="18" y1="20" x2="30" y2="20"/><line x1="18" y1="30" x2="30" y2="30"/><line x1="18" y1="40" x2="30" y2="40"/><rect x="36" y="16" width="12" height="10" rx="1"/><rect x="36" y="34" width="12" height="10" rx="1"/></svg>`
 };
 
 const PRODUCTS = [
   {
     id: 1, level: 'principiante', icon: 'multimetro',
-    title: 'Multímetro digital automático',
-    badge: 'Mejor relación calidad-precio',
-    why: '<b>Lo primero que necesitas</b> antes de tocar un solo cable. Auto-rango para que no te preocupes por configurar escalas mientras aprendes Ley de Ohm.',
-    price: '$349 MXN aprox.'
+    title: 'Multímetro compacto MUL-005 (Steren)',
+    badge: 'Indispensable en tu maletín',
+    why: '<b>2° semestre.</b> El estándar de entrada para medir variables en DC: resistencia hasta 2 MΩ, batería y puntas incluidas. Es lo primero que te van a pedir en el laboratorio.',
+    price: '$99.00 MXN',
+    link: 'https://www.mercadolibre.com.mx/multimetro-compacto-economico--mul005/up/MLMU973910327'
   },
   {
     id: 2, level: 'principiante', icon: 'protoboard',
-    title: 'Protoboard 830 puntos + cables jumper',
-    badge: 'Esencial para prototipos',
-    why: 'El que vas a usar en <b>cada práctica</b> de circuitos del primer semestre. El de 830 puntos te da espacio real para no estar reorganizando todo cada rato.',
-    price: '$129 MXN aprox.'
+    title: 'Kit de Electrónica Básica Tecneu',
+    badge: 'Todo en un solo kit',
+    why: '<b>2° semestre.</b> Protoboard de 830 puntos + fuente MB102 (9V/1A) + conectores. Cubre las prácticas de Módulo I: diagnóstico de circuitos y mediciones en corriente directa.',
+    price: '$206.84 MXN',
+    link: 'https://www.mercadolibre.com.mx/kit-electronica-basica-tecneu-protoboard-resistencias-fuente-9v/p/MLM47998239'
   },
   {
-    id: 3, level: 'principiante', icon: 'destornilladores',
-    title: 'Set de destornilladores de precisión (32 piezas)',
-    badge: 'Ideal para mantenimiento',
-    why: 'Para desarmar de todo: laptops, drivers de motores, gadgets. <b>Puntas intercambiables</b> que cubren el 90% de los tornillos que te vas a encontrar.',
-    price: '$199 MXN aprox.'
+    id: 3, level: 'principiante', icon: 'chip',
+    title: 'Kit de Compuertas Lógicas Básicas TTL',
+    badge: 'Base de la lógica digital',
+    why: '<b>3.er semestre.</b> Serie 74LS completa (NOT, AND, OR, XOR, XNOR) para comprobar funciones lógicas combinacionales con circuitos integrados TTL. Incluye caja organizadora.',
+    price: '$215.00 MXN',
+    link: 'https://www.mercadolibre.com.mx/kit-compuertas-logicas-basicas-7400020407083286-266/p/MLM46284954'
   },
   {
-    id: 4, level: 'profesional', icon: 'cautin',
-    title: 'Estación de soldadura regulable (60W)',
-    badge: 'Ideal para prototipos',
-    why: 'Control de temperatura real, no el cautín fijo de ferretería. <b>Marca la diferencia</b> al soldar componentes SMD pequeños sin freírlos.',
-    price: '$699 MXN aprox.'
+    id: 4, level: 'profesional', icon: 'arduino',
+    title: 'Tarjeta Arduino Uno R3 (chip CH340G)',
+    badge: 'Tu primer microcontrolador',
+    why: '<b>4.° semestre.</b> Base para implementar algoritmos en tarjetas de arquitectura abierta. Compatible con toda la familia de shields y sensores del Módulo III. Tienda oficial Unit Electronics.',
+    price: 'desde $129.00 MXN',
+    link: 'https://www.mercadolibre.com.mx/tienda/unit-electronics'
   },
   {
-    id: 5, level: 'profesional', icon: 'fuente',
-    title: 'Fuente de poder de laboratorio regulable',
-    badge: 'Mejor relación calidad-precio',
-    why: 'Voltaje y corriente ajustables con protección contra cortos. <b>Indispensable</b> cuando empiezas a probar motores y drivers que sí pueden tronar algo.',
-    price: '$1,250 MXN aprox.'
+    id: 5, level: 'profesional', icon: 'robotcar',
+    title: 'Kit Robot Seguidor de Línea 2WD',
+    badge: 'Llave en mano',
+    why: '<b>4.° semestre.</b> Incluye Arduino Uno R3, puente H L298N, 2 sensores TCRT5000, chasis de acrílico y motorreductores 48:1. Justo lo necesario para el proyecto de evasión y seguimiento de trayectorias.',
+    price: '$399.99 MXN',
+    link: 'https://www.mercadolibre.com.mx/kit-robot-seguidor-de-linea-2wd-compatible-arduino-r3-l298/up/MLMU3671496044'
   },
   {
-    id: 6, level: 'profesional', icon: 'osciloscopio',
-    title: 'Osciloscopio digital de bolsillo',
-    badge: 'Para depurar en serio',
-    why: 'Cuando el multímetro ya no te dice qué pasa con una señal PWM, esto sí. <b>Compacto</b> pero suficiente para depurar comunicación serial y señales de sensores.',
-    price: '$1,890 MXN aprox.'
+    id: 6, level: 'profesional', icon: 'motor',
+    title: 'Motor a pasos Nema 23 (OK57H18112A)',
+    badge: 'Para proyectos de potencia',
+    why: '<b>5.° semestre.</b> 4.2 A / 3 Nm de torque, para actuadores electromecánicos de potencia y diseño cinemático de robots de manipulación. Tienda oficial Unit Electronics.',
+    price: '$685.45 MXN',
+    link: 'https://www.mercadolibre.com.mx/tienda/unit-electronics'
   },
   {
-    id: 7, level: 'ia-robotica', icon: 'arduino',
-    title: 'Kit Arduino Uno R3 + sensores',
-    badge: 'Ideal para prototipos',
-    why: 'La puerta de entrada a IoT y robótica. <b>Incluye sensores comunes</b> (ultrasónico, IR, temperatura) que vas a reusar en casi cualquier proyecto.',
-    price: '$459 MXN aprox.'
+    id: 7, level: 'profesional', icon: 'conveyor',
+    title: 'Banda transportadora para Arduino (Mogo)',
+    badge: 'Proyecto integrador',
+    why: '<b>5.° semestre.</b> Estructura de MDF con rodillos, lona de arrastre y motorreductor incluidos, preensamblada. Base perfecta para tu celda de clasificación dimensional con HC-SR04 + servo MG90S.',
+    price: '$339.98 MXN',
+    link: 'https://www.mercadolibre.com.mx/banda-transportadora-para-arduino-proyecto/up/MLMU473240137'
   },
   {
-    id: 8, level: 'ia-robotica', icon: 'raspberry',
-    title: 'Raspberry Pi 4 (4GB) para IA embebida',
-    badge: 'Mejor relación calidad-precio',
-    why: 'Cuando Arduino se queda corto y necesitas correr modelos ligeros o visión por computadora. <b>Suficiente potencia</b> para prototipos de IA on-device.',
-    price: '$1,599 MXN aprox.'
+    id: 8, level: 'profesional', icon: 'fuente',
+    title: 'Fuente de alimentación regulable de laboratorio',
+    badge: 'Para no quemar tu Arduino',
+    why: 'Voltaje y corriente ajustables con protección contra cortos. Indispensable en cuanto empiezas a probar motores y drivers de potencia. <i>Precio de referencia varía según vendedor.</i>',
+    price: 'variable según vendedor',
+    link: 'https://listado.mercadolibre.com.mx/fuente-de-alimentacion-regulable'
   },
   {
-    id: 9, level: 'ia-robotica', icon: 'impresora3d',
-    title: 'Mini impresora 3D para prototipado rápido',
-    badge: 'Ideal para prototipos',
-    why: 'Imprime tus propias carcasas y soportes mecánicos en horas, no semanas. <b>Cambia por completo</b> cómo iteras un brazo robótico o un chasis.',
-    price: '$3,490 MXN aprox.'
+    id: 9, level: 'ia-robotica', icon: 'wifichip',
+    title: 'Tarjeta ESP32 DevKitC (Type-C)',
+    badge: 'Wi-Fi + Bluetooth integrado',
+    why: '<b>6.° semestre.</b> Conectividad dual para reportar variables en tiempo real vía MQTT o levantar un HMI/SCADA web. El corazón de tu proyecto de integración IoT.',
+    price: '$139.99 MXN',
+    link: 'https://listado.mercadolibre.com.mx/unit-electronic'
+  },
+  {
+    id: 10, level: 'ia-robotica', icon: 'plcind',
+    title: 'PLC Control Shield para ESP32 (30 pines)',
+    badge: 'Automatización industrial',
+    why: '<b>6.° semestre.</b> 6 entradas optoacopladas y 6 salidas a relevador. Corre una máquina de estado tipo Ladder con OpenPLC sobre tu ESP32, sin comprar un PLC comercial de miles de pesos.',
+    price: '$284.99 MXN',
+    link: 'https://listado.mercadolibre.com.mx/arduino-plc-shield'
+  },
+  {
+    id: 11, level: 'ia-robotica', icon: 'camera',
+    title: 'Cámara de visión artificial HuskyLens',
+    badge: 'IA sin código pesado',
+    why: 'Reconocimiento de objetos, rostros y colores <b>plug-and-play</b>, sin programar algoritmos de visión desde cero. Ideal para subir el nivel de tu proyecto terminal sin meterte en Python puro. Tienda oficial Unit Electronics.',
+    price: '$1,507.00 MXN',
+    link: 'https://www.mercadolibre.com.mx/tienda/unit-electronics'
+  },
+  {
+    id: 12, level: 'ia-robotica', icon: 'plcind',
+    title: 'Arduino Opta Micro PLC (RS485)',
+    badge: 'Grado industrial',
+    why: 'Doble núcleo STM32H747XI, cumple normas de aislamiento y confiabilidad industrial. Para cuando tu proyecto terminal necesita verse (y comportarse) como un sistema profesional de automatización.',
+    price: '$5,682.00 MXN',
+    link: 'https://www.mercadolibre.com.mx/arduino-opta-micro-plc-rs485/up/MLMU562564042'
   }
 ];
 
@@ -646,8 +687,8 @@ function cardHTML(p){
       <h3>${p.title}</h3>
       <p class="card-why">${p.why}</p>
       <div class="card-foot">
-        <span class="price-tag">desde <b>${p.price}</b></span>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="cta-btn" data-product="${p.title}">
+        <span class="price-tag">ref. <b>${p.price}</b></span>
+        <a href="${p.link}" target="_blank" rel="nofollow sponsored noopener" class="cta-btn" data-product="${p.title}">
           Ver en Mercado Libre
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
@@ -708,17 +749,6 @@ document.getElementById('searchInput').addEventListener('input', e=>{
   applyFilters();
 });
 
-/* ============ CTA click feedback (no real link) ============ */
-grid.addEventListener('click', e=>{
-  const cta = e.target.closest('.cta-btn');
-  if(!cta) return;
-  e.preventDefault();
-  const original = cta.innerHTML;
-  cta.innerHTML = '✓ Enlace de ejemplo';
-  cta.style.filter = 'brightness(0.9)';
-  setTimeout(()=>{ cta.innerHTML = original; cta.style.filter=''; }, 1400);
-});
-
 /* ============ 3D tilt on cards ============ */
 function setupCardTilt(){
   document.querySelectorAll('.card').forEach(card=>{
@@ -734,8 +764,16 @@ function setupCardTilt(){
   });
 }
 
-/* ============ scroll reveal ============ */
+/* ============ scroll reveal (con red de seguridad) ============ */
 function observeCards(){
+  const cards = document.querySelectorAll('.card');
+
+  if(!('IntersectionObserver' in window)){
+    /* sin soporte -> mostrar todo de una vez */
+    cards.forEach(c => c.classList.add('in-view'));
+    return;
+  }
+
   const io = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
@@ -743,8 +781,15 @@ function observeCards(){
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.card').forEach(c=> io.observe(c));
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+  cards.forEach(c => io.observe(c));
+
+  /* red de seguridad: si por lo que sea el observer no dispara
+     (iframe de preview, navegador raro, etc.) forzamos que se vea todo */
+  setTimeout(()=>{
+    cards.forEach(c => c.classList.add('in-view'));
+  }, 1800);
 }
 
 /* ============ topbar scroll state + back to top ============ */
